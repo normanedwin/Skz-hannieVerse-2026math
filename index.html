@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EddieVerse.Math26</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+<header>
+  <h1>EddieVerse.Math26</h1>
+  <p id="platformSubtitle">Multilingual AI Step-by-Step Math Platform</p>
+  <div class="header-controls">
+    <select id="languageSelect" onchange="changeLanguage()">
+      <option value="en">English</option>
+      <option value="de">German</option>
+      <option value="ko">Korean</option>
+      <option value="fi">Finnish</option>
+      <option value="sw">Swahili</option>
+      <option value="es">Spanish</option>
+    </select>
+    <button id="themeToggle">Switch Theme</button>
+  </div>
+</header>
+
+<section class="calculator">
+  <h2>AI Solver 🧠</h2>
+  <input type="text" id="mathInput" placeholder="Enter your math question...">
+  <button onclick="solveMath()">Solve</button>
+  <div id="solution"></div>
+</section>
+
+<section class="keyboard">
+  <h3>Math Keyboard ⌨️</h3>
+  <div class="keys">
+    <button onclick="insertValue('7')">7</button>
+    <button onclick="insertValue('8')">8</button>
+    <button onclick="insertValue('9')">9</button>
+    <button onclick="insertValue('+')">+</button>
+
+    <button onclick="insertValue('4')">4</button>
+    <button onclick="insertValue('5')">5</button>
+    <button onclick="insertValue('6')">6</button>
+    <button onclick="insertValue('-')">-</button>
+
+    <button onclick="insertValue('1')">1</button>
+    <button onclick="insertValue('2')">2</button>
+    <button onclick="insertValue('3')">3</button>
+    <button onclick="insertValue('*')">*</button>
+
+    <button onclick="insertValue('0')">0</button>
+    <button onclick="insertValue('/')">/</button>
+    <button onclick="insertValue('^')">^</button>
+    <button onclick="clearInput()">C</button>
+  </div>
+</section>
+
+<section class="notebook">
+  <h3>Notebook 📓</h3>
+  <div id="notebookHistory"></div>
+  <textarea id="notebookInput" placeholder="Write your note here..." rows="3"></textarea>
+  <button onclick="saveNote()">Send</button>
+</section>
+
+<section class="topics">
+  <h3>Math Topics 📚</h3>
+  <input type="text" id="topicsSearch" placeholder="Search topics..." onkeyup="searchWithLLM(this.value)">
+  <ul id="topicsList">
+    <li>Basic Math</li>
+    <li>Algebra</li>
+    <li>Trigonometry</li>
+    <li>Calculus</li>
+    <li>Superior Math</li>
+  </ul>
+  <div id="topicNotes"><p>Select a topic to see notes and step-by-step solutions.</p></div>
+</section>
+
+<section class="graphs">
+  <h3>Graph Plotter 📈</h3>
+  <input type="text" id="graphInput" placeholder="Enter equation (e.g., y=2*x+1)">
+  <button onclick="plotGraph()">Plot Graph</button>
+  <canvas id="graphCanvas" width="300" height="200"></canvas>
+</section>
+
+<footer>
+  <p>Designed & Created by Norman Edwin</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
