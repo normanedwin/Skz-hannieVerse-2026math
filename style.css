@@ -1,0 +1,35 @@
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin:0; padding:0;
+  color:#fff;
+  background: url('https://i.imgur.com/Xs3C2Bk.png') repeat;
+  background-size: cover;
+  transition: all 0.3s ease;
+}
+
+body.light-theme {
+  background: url('https://i.imgur.com/0d7rC5a.png') repeat;
+  color: #111;
+}
+
+header, footer { text-align:center; padding:10px; }
+.header-controls { display:flex; justify-content:center; gap:10px; margin-top:5px; }
+
+h1,h2,h3 { margin:5px 0; }
+section { margin:10px; padding:10px; border-radius:10px; background-color: rgba(30,41,59,0.85); }
+
+input, textarea, select, button { width:100%; margin:5px 0; padding:8px; border-radius:5px; border:none; font-size:16px; }
+button { background-color:#0ea5e9; cursor:pointer; }
+button:hover { background-color:#0284c7; }
+
+.keys button { width:22%; margin:1%; font-size:18px; }
+
+canvas { background-color:#111827; border-radius:10px; }
+
+ul { padding-left:20px; }
+li { cursor:pointer; margin-bottom:5px; }
+li:hover { color:#0ea5e9; }
+
+#notebookHistory { max-height:200px; overflow-y:auto; padding:5px; background:#111827; border-radius:10px; margin-bottom:5px; }
+
+#topicsSearch { margin-bottom:5px; padding:8px; border-radius:5px; border:none; font-size:16px; }
